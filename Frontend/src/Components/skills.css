@@ -1,0 +1,20 @@
+/* 
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+
+@keyframes progressAnimation {
+    from { width: 0; }
+    to { width: attr(data-width); }
+}
+
+.progress-bar {
+    animation: progressAnimation 1.5s ease-in-out forwards;
+} */
