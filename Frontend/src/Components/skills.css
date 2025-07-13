@@ -1,20 +1,164 @@
-/* 
-.skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Skills Section - Premium Styling */
+.skills-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(13,110,253,0.05)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #0d6efd;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title i {
+    margin-right: 0.8rem;
+    font-size: 2.2rem;
+    vertical-align: middle;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
 
-@keyframes progressAnimation {
-    from { width: 0; }
-    to { width: attr(data-width); }
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.skill-icon i {
+    font-size: 1.8rem;
+}
+
+.skill-info {
+    flex: 1;
+}
+
+.skill-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #212529;
+}
+
+.skill-info span {
+    font-weight: bold;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.progress-container {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
 }
 
 .progress-bar {
-    animation: progressAnimation 1.5s ease-in-out forwards;
-} */
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+    transition: width 1.5s ease-out;
+}
+
+.progress-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.8), rgba(255,255,255,0.3));
+    animation: shine 2s infinite;
+    opacity: 0.5;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Color Classes */
+.bg-danger { background: linear-gradient(90deg, #dc3545, #bb2d3b); }
+.bg-primary { background: linear-gradient(90deg, #0d6efd, #0b5ed7); }
+.bg-warning { background: linear-gradient(90deg, #ffc107, #e0a800); }
+.bg-info { background: linear-gradient(90deg, #0dcaf0, #0da5e9); }
+.bg-success { background: linear-gradient(90deg, #198754, #157347); }
+.bg-purple { background: linear-gradient(90deg, #6f42c1, #5a32a3); }
+.bg-teal { background: linear-gradient(90deg, #20c997, #199d7a); }
+.bg-violet { background: linear-gradient(90deg, #6f42c1, #5a32a3); }
+.bg-orange { background: linear-gradient(90deg, #fd7e14, #e56f0c); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-card {
+        padding: 1.2rem;
+    }
+}

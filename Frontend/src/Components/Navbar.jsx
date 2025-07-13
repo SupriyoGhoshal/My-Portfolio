@@ -31,20 +31,20 @@ function Navbar() {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/home/My_Portfolio">Home</a>
+                                    <a className="nav-link active" aria-current="page" href="#Home">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/home/My_Portfolio/about">About</a>
+                                    <a className="nav-link" href="#About">About</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/home/My_Portfolio/_skill">Skills</a>
+                                    <a className="nav-link" href="#Skills">Skills</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/home/My_Portfolio/see_PROJECTS">Projects</a>
+                                    <a className="nav-link" href="#Projects">Projects</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link btn btn-primary text-white ms-lg-2 mt-2 mt-lg-0" 
-                                       href="/home/My_Portfolio/_Contact_ME">Contact Me</a>
+                                       href="#Contact">Contact Me</a>
                                 </li>
                             </ul>
                         </div>
