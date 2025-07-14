@@ -1,6 +1,44 @@
+import { useState } from "react"
+import axios from "axios"
 import "./contact.css"
 
 function Contact() {
+    const [submit, setSubmit] = useState(false);
+    const [name , setName] = useState("");
+    const [email , setEmail] = useState("");
+    const [number , setNumber] = useState("");
+    const [subject , setSubject] = useState("");
+    const [message , setMessage] = useState("");
+
+    const handleContact = async (e) => {
+        e.preventDefault(); // prevent page reload
+
+        try {
+            const res = await axios.post("/send-message", {
+                name,
+                email,
+                number,
+                subject,
+                message
+            });
+
+            console.log("Message sent:", res.data);
+            setSubmit(true); // optional flag
+
+            // Clear form
+            setName("");
+            setEmail("");
+            setNumber("");
+            setSubject("");
+            setMessage("");
+
+            alert("Message sent successfully!");
+        } catch (err) {
+            console.error("Error sending message:", err);
+            alert("Something went wrong. Please try again.");
+        }
+    };
+    
     return (
         <>
             {/* Contact Section */}
@@ -11,7 +49,7 @@ function Contact() {
                     </h2>
                     
                     <div className="contact-form-container">
-                        <form className="contact-form">
+                        <form onSubmit={handleContact} className="contact-form">
                             {/* Form fields remain the same as before */}
                             <div className="form-row">
                                 <div className="form-group">
