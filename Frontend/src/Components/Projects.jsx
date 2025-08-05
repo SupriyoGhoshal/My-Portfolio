@@ -12,6 +12,13 @@ function Projects() {
       actionText: "View Project"
     },
     {
+      title: "Framer Project",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYC5ELcypMSxCl_0Z72QTMnhJz7rwMcol9Q&s",
+      description: "A Full stack e-commerce platform where has cart functionality, order functionality.",
+      link: "",
+      actionText: "Explore the web-app"
+    },
+    {
       title: "Portfolio",
       image: "https://images.template.net/120192/3d-modeling-portfolio-presentation-template-dgpnc.jpg",
       description: "A personal portfolio website showcasing my skills and work.",

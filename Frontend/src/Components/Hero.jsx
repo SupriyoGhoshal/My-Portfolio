@@ -1,4 +1,6 @@
 import "./hero.css"
+import resumePdf from '../assets/Supriyo resume.pdf';
+
 function Hero() {
     return ( 
         <>
@@ -83,7 +85,7 @@ function Hero() {
                             </p>
                             
                             <div className="about-buttons">
-                                <a href="" className="btn-primary" download>
+                                <a href={resumePdf} className="btn-primary" download>
                                     <i className="bx bx-download"></i>Download Resume
                                 </a>
                                 <a href="https://www.linkedin.com/in/supriyo-ghoshal-b5551028b/" className="btn-secondary">
