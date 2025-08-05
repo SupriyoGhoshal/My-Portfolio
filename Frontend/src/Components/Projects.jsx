@@ -8,7 +8,7 @@ function Projects() {
       title: "Wonderlust",
       image: wonderlustImg,
       description: "This is a Full-Stack Project",
-      link: "#",
+      link: "https://wonderlust-gy8f.onrender.com/Listings",
       actionText: "View Project"
     },
     {

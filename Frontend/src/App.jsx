@@ -4,7 +4,6 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Skills from "./Components/Skills";
-import Contact from "./Components/Contact";
 import Projects from "./Components/Projects";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <Hero/>
       <Skills/>
       <Projects/>
-      <Contact/>
       <Footer/>
     </>
   );
